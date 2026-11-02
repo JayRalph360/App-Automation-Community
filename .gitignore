@@ -6,8 +6,8 @@ node_modules/
 .env
 
 # Company app and test image (keep these out of GitHub)
-app/*.apk
-assets/*.png
+# app/*.apk
+# assets/*.png
 
 # Generated output
 reports/
