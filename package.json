@@ -1,0 +1,27 @@
+{
+  "name": "appautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/main.js",
+    "db:init": "node src/database/init-db.js",
+    "import:merchants": "node src/importer/run-import.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "appium": "^3.9.0",
+    "csv-parse": "^7.0.3",
+    "dotenv": "^18.0.8",
+    "exceljs": "^4.4.0",
+    "pg": "^8.23.1",
+    "webdriverio": "^10.0.2"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  }
+}

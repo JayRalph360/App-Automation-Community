@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.appium/
+
+# Secrets
+.env
+
+# Company app and test image (keep these out of GitHub)
+app/*.apk
+assets/*.png
+
+# Generated output
+reports/
+artifacts/
+
+# Merchant data (phone numbers, business names)
+# Add your importer's input / processed / failed folders here, for example:
+data-imports/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
