@@ -1,0 +1,47 @@
+APK FILE GOES IN THIS FOLDER (app/)
+===================================
+
+The Telecel commercial internal app (.apk) is NOT stored in GitHub.
+It is a company app and is too large for GitHub (over 100 MB), so
+.gitignore excludes it. Copy it into this folder by hand on every new
+computer.
+
+1. Get the APK
+   Ask the project owner for the file, or use your copy from the
+   computer that already runs the project.
+
+2. Put it in this folder
+   Place the file directly inside the "app" folder, next to this
+   apk.txt file:
+
+       <project>/app/commercial-internal-app-v1.6.6+248.apk
+
+3. Make sure the file name matches the project
+   The project looks for the exact name set in src/config/paths.js:
+
+       APK_PATH -> app/commercial-internal-app-v1.6.6+248.apk
+
+   If your APK has a different name or version, do ONE of these:
+     - rename the file to match the name above, or
+     - open src/config/paths.js and change the file name in APK_PATH.
+
+4. Check that Git is not tracking it
+   Run:  git status
+   The APK must NOT appear in the list. If it does, run:
+       git rm --cached "app/<apk file name>"
+   and confirm .gitignore contains the line:  app/*.apk
+
+5. Run the project
+   Start the emulator setup with:  npm start
+   The automation uses the APK from this folder to put the app on the
+   emulator. The app's package name must be the one in settings.js
+   (application.package: com.example.commercial_internal_app).
+
+6. Updating to a new version later
+   - Put the new APK in this folder.
+   - Update the file name in APK_PATH in src/config/paths.js.
+   - Delete the old APK from this folder.
+   - If the emulator still has the old version installed, uninstall it
+     first (or wipe the emulator data) so the new one installs cleanly.
+
+Never commit the APK or upload it to GitHub, Git LFS or any public place.
